@@ -1,0 +1,5 @@
+# Shell scripts run on macOS/Linux: never CRLF, whatever core.autocrlf says on a Windows checkout.
+# A CRLF jrmac copied to a Mac fails as "bad interpreter: /bin/bash^M", and since every
+# installed tool is a symlink to the one jrmac, every tool on that machine breaks at once.
+posix/jrmac text eol=lf
+*.sh text eol=lf
